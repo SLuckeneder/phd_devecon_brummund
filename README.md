@@ -18,7 +18,7 @@ The paper seemed to be straight forwardly replicable, because it offers one R sc
 
 ## Problem Set 1:  Replicate 2 tables - second try
 
-As a second try, I chose 'Development from Representation? A Study of Quotas for the Scheduled Castes in India' by Francesca Refsum Jensenius published in the American Economic Journal: Applied Economics 2015, 7 (3): 196-220. This was the first article when searching for 'development' and a study using R code in above mentioned app.
+As a second try, I chose 'Development from Representation? A Study of Quotas for the Scheduled Castes in India' by Francesca Refsum Jensenius published in the American Economic Journal: Applied Economics 2015, 7 (3): 196-220. This was the first article when searching for 'development' and restricting the search to R code in above mentioned app.
 
 Paper: https://www.aeaweb.org/articles?id=10.1257/app.20140201
 
