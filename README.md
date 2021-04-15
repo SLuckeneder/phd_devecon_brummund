@@ -1,4 +1,4 @@
-# Topics in Development Economics (Ph.D course)
+# Topics in Development Economics (PhD course)
 
 Course by Peter Brummund S2021
 
