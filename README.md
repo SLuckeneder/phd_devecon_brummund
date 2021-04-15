@@ -4,6 +4,7 @@ Course by Peter Brummund S2021
 
 Repo for replication study and extension 
 
+Here is a nice [R-blog](https://www.r-bloggers.com/2019/02/finding-economic-articles-with-data/) on 'Finding Economic Articles With Data', introducing a [Shiny app](http://econ.mathematik.uni-ulm.de:3200/ejd/) that allows to search for articles that have an accessible data and code supplement.
 
 ## Problem Set 1:  Replicate 2 tables
 
@@ -17,7 +18,7 @@ The paper seemed to be straight forwardly replicable, because it offers one R sc
 
 ## Problem Set 1:  Replicate 2 tables - second try
 
-As a second try, I chose 'Development from Representation? A Study of Quotas for the Scheduled Castes in India' by Francesca Refsum Jensenius published in the American Economic Journal: Applied Economics 2015, 7 (3): 196-220. 
+As a second try, I chose 'Development from Representation? A Study of Quotas for the Scheduled Castes in India' by Francesca Refsum Jensenius published in the American Economic Journal: Applied Economics 2015, 7 (3): 196-220. This was the first article when searching for 'development' and a study using R code in above mentioned app.
 
 Paper: https://www.aeaweb.org/articles?id=10.1257/app.20140201
 
