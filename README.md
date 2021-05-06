@@ -59,7 +59,7 @@ Comparing the balance of the sample before and after matching yields similar res
 
 While the paper uses a sample of 448 treated and 448 control observations (in a more rigorous matching, the author then also restricted the sample to 324-324), I obtained 365 reserved constituencies and a control group of 1136. For 118 treated constituencies, the algorithm could not find any fitting matches.
 
-I then used the new sample to re-estimate results shown in Table 3 of the original paper (see Problem Set 1). My robustness checks based on the new matching strategy were twofold. First, I followed the paper's code very closely and compared 365 treated to 1136 control constituencies in an OLS setting. Second, used the same sample, but weighted all observations based on weights that I received from the matching algorithm. Results are shown in the table below. The first two columns replicate columns 1 and 2 from the original Table 3. Columns 3 and 4 refer to my first estimation based on CEM, and columns 5 and 6 show the results using the weighted OLS setting. 
+I then used the new sample to re-estimate results shown in Table 3 of the original paper (see Problem Set 1). My robustness checks based on the new matching strategy were twofold. First, I followed the paper's code very closely and compared 365 treated to 1136 control constituencies in an OLS setting. Second, I used the same sample, but weighted all observations based on weights that I received from the matching algorithm. Results are shown in the table below. The first two columns replicate columns 1 and 2 from the original Table 3. Columns 3 and 4 refer to my first estimation based on CEM, and columns 5 and 6 show the results using the weighted OLS setting. 
 
 ![](FRJ2015_table3_robust.PNG)
 
