@@ -45,7 +45,7 @@ As a second example, I chose Table 3, also working like a charm:
 ![](FRJ2015_table3_rep.PNG)
 
 
-## Problem Set 2:  COnduct 2 robustness checks
+## Problem Set 2:  Conduct 2 robustness checks
 
 In a second step, we try to examine the robustness of the main results and extend the econometric analysis of the selected study (I build upon the second try study of Problem Set 1 by Francesca Refsum Jensenius (2015). The modified code can be found in `problem_set_2.R`.
 
