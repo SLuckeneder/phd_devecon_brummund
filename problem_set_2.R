@@ -184,21 +184,24 @@ for (i in 1:3) {
     
   }
   
-  summary(Match)
-  summary(Matched_norep)
-  summary(Matched_cem)
+  # summary(Match)
+  # summary(Matched_norep)
+  # summary(Matched_cem)
   
   #####Reporting balance
   if (i==1) {
     bal_SC_norep1<-MatchBalance(Tr~SC_percent71_true, match.out=Match, nboots=1000, data=matchdta)
+    bal.out_norep<-MatchBalance(Tr~Pop_tot1971+ P_ST71 +Plit71_nonSC+Plit71_SC+ P_W71_nonSC + P_W71_SC +P_al71_nonSC+P_al71_SC, match.out=Match, nboots=1000, data=matchdta)
+    
   } else if (i==2) {
     bal_SC_norep2<-MatchBalance(Tr~SC_percent71_true, match.out=Matched_norep, nboots=1000, data=matchdta)
+    bal.out_norep<-MatchBalance(Tr~Pop_tot1971+ P_ST71 +Plit71_nonSC+Plit71_SC+ P_W71_nonSC + P_W71_SC +P_al71_nonSC+P_al71_SC, match.out=Matched_norep, nboots=1000, data=matchdta)
+    
   }	else if (i ==3){
     library(cobalt)
     bal_SC_cem<- cobalt::bal.tab(Matched_cem, data = matchdta)
   }
   
-  bal.out_norep<-MatchBalance(Tr~Pop_tot1971+ P_ST71 +Plit71_nonSC+Plit71_SC+ P_W71_nonSC + P_W71_SC +P_al71_nonSC+P_al71_SC, match.out=Matched_norep, nboots=1000, data=matchdta)
     
   covariates<-as.data.frame(cbind(Pop_tot1971, P_ST71, Plit71_nonSC, Plit71_SC, P_W71_nonSC , P_W71_SC, P_al71_nonSC, P_al71_SC))
   
@@ -288,19 +291,23 @@ dev.off()
 
 # cem
 library(viridis)
-p <- cobalt::love.plot(bal.tab(Matched_cem, data = matchdta, m.threshold=0.1),
-                  stat = "mean.diffs", abs = F, colors = c("darkorchid2", "skyblue2"), shapes = c(17, 15), 
-                  size = 5)
-ggplot2::ggsave("Figures/love_plot.pdf", 
-                plot = p, device = "pdf", 
-                scale = 1, width = 200, height = 150, units = "mm")
+# p <- cobalt::love.plot(bal.tab(Matched_cem, data = matchdta, m.threshold=0.1),
+#                   stat = "mean.diffs", abs = F, colors = c("darkorchid2", "skyblue2"), shapes = c(17, 15), 
+#                   size = 5)
+# ggplot2::ggsave("Figures/love_plot.pdf", 
+#                 plot = p, device = "pdf", 
+#                 scale = 1, width = 200, height = 150, units = "mm")
 
 p <- cobalt::bal.plot(Matched_cem, data = matchdta, var.name = 'SC_percent71_true', which = 'both', 
                  sample.names = c("Unadjusted", "Adjusted"),
                  colors = c(viridis(3)[1], viridis(3)[3])) 
-ggplot2::ggsave("Figures/bal_plot.pdf", 
-                plot = p, device = "pdf", 
-                scale = 1, width = 250, height = 150, units = "mm")
+# ggplot2::ggsave("Figures/bal_plot.pdf", 
+#                 plot = p, device = "pdf", 
+#                 scale = 1, width = 250, height = 150, units = "mm")
+ggplot2::ggsave("Figures/FRJ2015_fig3_cem.png", 
+                plot = p, device = "png", 
+                scale = 1, width = 250, height = 120, units = "mm")
+
 
 ###############################################
 ##MATCHING ESTIMATES
@@ -371,7 +378,7 @@ articlematrix<-mymatrix[-1,c(1,4,NA, 5,8, NA, 9, 12)]
 library(xtable)
 xtable(articlematrix)
 
-pdf(file="Figures/Fig_matching_est_CEMs.pdf", height=7, width =7)
+png(file="Figures/FRJ2015_fig4_cem.png", width = 20, height = 20, units = "cm", res = 1000)
 par(mar = c(4, 12, 1, .5))
 
 plot(x=NULL,axes=F, xlim=c(-10, 10), ylim=c(1,14),xlab="Difference in percentage points in 2001 (SC-GEN)", ylab="", cex.main=2)
